@@ -1,0 +1,56 @@
+// Flower Shop Management System Schema
+digraph {
+	Users [label="Users
+---------------------------
+PK: user_id
+first_name
+last_name
+email
+password
+role
+created_at"]
+	Admin [label="Admin
+---------------------------
+PK: admin_id
+username
+password
+created_at"]
+	Flowers [label="Flowers
+---------------------------
+PK: flower_id
+name
+color
+price
+description
+image_path
+created_at"]
+	Orders [label="Orders
+---------------------------
+PK: order_id
+FK: user_id
+total_amount
+shipping_address
+payment_method
+order_date
+status"]
+	Order_Items [label="Order_Items
+---------------------------
+PK: order_item_id
+FK: order_id
+FK: flower_id
+quantity
+price"]
+	Cart [label="Cart
+---------------------------
+PK: cart_id
+FK: user_id
+FK: flower_id
+quantity
+price
+total_price"]
+	Users -> Orders [label="1 : N"]
+	Orders -> Order_Items [label="1 : N"]
+	Flowers -> Order_Items [label="1 : N"]
+	Users -> Cart [label="1 : N"]
+	Flowers -> Cart [label="1 : N"]
+}

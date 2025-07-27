@@ -1,0 +1,143 @@
+/* ===== Reset & Box-Sizing ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ===== CSS Variables for Easy Customization ===== */
+  :root {
+    --bg-color: #f8f9fa;
+    --bg-image: url("wallpaperflare-cropped.jpg");  /* Change this URL to your desired background image */
+    --primary-font: 'Arial', sans-serif;
+    --primary-color: #e91e63;       /* Rich pink */
+    --secondary-color: #f8bbd0;     /* Soft pink */
+    --accent-color: #4caf50;        /* Fresh green */
+    --text-color: black;
+    --container-bg: #ffffff;
+    --border-color: #ddd;
+    --button-bg: #e91e63;
+    --button-hover-bg: #d81b60;
+    --link-color: #e91e63;
+    --link-hover-color: #d81b60;
+  }
+  
+  /* ===== Body & Background ===== */
+  body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  /* ===== Container ===== */
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--container-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* ===== Headings ===== */
+  h2, h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  /* ===== Forms ===== */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  input, textarea, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+  }
+  
+  button {
+    background-color: var(--button-bg);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  /* ===== Table Styling ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* ===== Links ===== */
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  
+  /* ===== Checkout Button ===== */
+  .checkout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--button-bg);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-button:hover {
+    background: var(--button-hover-bg);
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+    
+    h2, h3 {
+      font-size: 1.8em;
+    }
+  }
+  
